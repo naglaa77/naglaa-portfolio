@@ -22,8 +22,8 @@ a {
   text-decoration: none;
 }
 
-.max-width {
-  max-width: 1300px;
+.container {
+  max-width: 1500px;
   padding: 0 80px;
   margin: auto;
 }
@@ -55,6 +55,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
 }
 
 .navbar .max-width .logo a {
@@ -99,26 +102,42 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
-.home .max-width {
-  margin: auto 0 auto 40px;
+.home .container .home-parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.home .max-width .text-1 {
+.home .container .home-parts .max-width {
+  margin: auto 0 auto 40px;
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.home .container .home-parts .max-width .text-1 {
   font-size: 2.7rem;
 }
 
-.home .max-width .text-2 {
+.home .container .home-parts .max-width .text-2 {
   font-size: 7.5rem;
   margin-left: -3px;
   font-weight: 600;
 }
 
-.home .max-width .text-3 {
+.home .container .home-parts .max-width .text-3 {
   font-size: 4rem;
   margin: 5px 0;
 }
 
-.home .max-width .text-3 span {
+.home .container .home-parts .max-width .text-3 span {
   font-weight: 600;
   color: crimson;
   position: relative;
