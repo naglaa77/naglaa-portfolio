@@ -198,20 +198,26 @@ a {
           animation: typing 4s steps(10) infinite;
 }
 
-.home a {
-  color: white;
+.home .home-parts .myinfo a {
   display: block;
-  width: 21rem;
   height: 6rem;
   border: 2px solid crimson;
   text-align: center;
-  font-size: 3em;
   padding: 0.3em;
   border-radius: 5px;
   font-weight: 600;
+  color: white;
+  width: 21rem;
+  font-size: 3em;
+  margin-top: 2em;
 }
 
-.home a:hover {
+.home .home-parts .myinfo a:hover {
+  color: #fff;
+  background-color: crimson;
+}
+
+.home .home-parts .myinfo a:hover {
   color: #fff;
   background-color: crimson;
 }
@@ -366,4 +372,136 @@ a {
     margin-bottom: .5em;
   }
 }
+
+/*start about me section*/
+.about-me {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.about-me .i-am {
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.about-me .i-am h2 {
+  font-size: 5rem;
+  font-family: sans-serif;
+  margin-bottom: 0.1em;
+}
+
+.about-me .i-am span {
+  display: block;
+  display: block;
+  font-size: 3rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.about-me .i-am span::after, .about-me .i-am span::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: 20px;
+  background-color: crimson;
+}
+
+.about-me .i-am span::before {
+  left: -56%;
+}
+
+.about-me .i-am span::after {
+  right: -56%;
+}
+
+.about-me .about-me-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-me .about-me-info .about-img {
+  width: 40%;
+}
+
+.about-me .about-me-info .about-img img {
+  max-width: 100%;
+  padding-bottom: 8em;
+}
+
+.about-me .about-me-info .about-detail {
+  width: 40%;
+}
+
+.about-me .about-me-info .about-detail h3 {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+}
+
+.about-me .about-me-info .about-detail p {
+  font-size: 2rem;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.about-me .about-me-info .about-detail .btn {
+  display: block;
+  height: 6rem;
+  border: 2px solid crimson;
+  text-align: center;
+  padding: 0.3em;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 16rem;
+  font-size: 2em;
+  color: #0f000b;
+  margin-top: 1em;
+  font-family: sans-serif;
+  line-height: 4rem;
+}
+
+.about-me .about-me-info .about-detail .btn:hover {
+  color: #fff;
+  background-color: crimson;
+}
+
+@media (max-width: 1200px) {
+  .about-me .about-me-info .about-img {
+    width: 40%;
+  }
+  .about-me .i-am h2 {
+    font-size: 4rem;
+  }
+  .about-me .about-me-info .about-detail h3 {
+    font-size: 3.5rem;
+  }
+  .about-me .about-me-info .about-detail {
+    width: 45%;
+  }
+  .about-me .about-me-info .about-detail p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 918px) {
+  .about-me .about-me-info .about-img {
+    width: 44%;
+  }
+  .about-me .about-me-info .about-detail {
+    width: 45%;
+  }
+}
+
+/*end about me section*/
 /*# sourceMappingURL=style.css.map */
