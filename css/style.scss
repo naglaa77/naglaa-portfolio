@@ -34,6 +34,7 @@ a {
     font-family: 'Roboto' , sans-serif;
     position: fixed;
     padding: 30px 0;
+    z-index: 5;
     &.change {
         background-color: $crisClr;
         padding: 15px 0;
@@ -86,6 +87,42 @@ a {
     }
 
 }
+@media screen and (max-width: 950px) {
+    .navbar .menu {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: $bg;
+        text-align: center;
+        padding-top: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        font-size: 4rem;
+        left: -100%;
+        transform: all 5s ease;
+        &.active {
+            left: 0;
+        }
+    }
+    .navbar .max-width .menu li {
+        margin-bottom: 2em;
+    }
+    .navbar .max-width .menu li a{
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    .navbar .max-width .menu-btn {
+        display: block;
+        z-index: 900;
+        transition: all 5s ease;
+    }
+    .navbar .menu-btn i.active::before {
+        content: ('\f00d');
+    }
+}
 
 /*End navbar*/
 // start home section
@@ -100,7 +137,6 @@ a {
         justify-content: space-between;
         align-items: center;
         .myinfo {
-            margin: auto 0 auto 40px;
             .text-1 {
                 font-size: 2.7rem;
             }
@@ -112,6 +148,7 @@ a {
             .text-3 {
                 font-size: 4rem;
                 margin: 5px 0;
+                overflow: hidden;
                 span{
                     font-weight: 600;
                     color: $crisClr;
@@ -128,6 +165,22 @@ a {
                     }
                 }
             }
+        }
+    }
+    a {
+        color: white;
+        display: block;
+        width: 21rem;
+        height: 6rem;
+        border: 2px solid crimson;
+        text-align: center;
+        font-size: 3em;
+        padding: 0.3em;
+        border-radius: 5px;
+        font-weight: 600;
+        &:hover {
+            color: $text;
+            background-color: $crisClr ;
         }
     }
     .box div {
@@ -206,39 +259,31 @@ a {
         left: 0%;
     }
 }
-@media screen and (max-width: 950px) {
-    .navbar .menu {
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        left: 0;
-        top: 0;
-        background-color: $bg;
-        text-align: center;
-        padding-top: 2em;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        font-size: 4rem;
-        left: -100%;
-        transform: all 5s ease;
-        &.active {
-            left: 0;
-        }
+@media screen and (max-width: 854px) {
+    .hom {
+        max-height: 80%;
     }
-    .navbar .max-width .menu li {
-        margin-bottom: 2em;
+    .home .profile-img img {
+        display: none;
     }
-    .navbar .max-width .menu li a{
-        font-size: 4rem;
-        font-weight: bold;
+    .home a {
+        margin-top: 4em;
     }
-    .navbar .max-width .menu-btn {
-        display: block;
-        z-index: 900;
-        transition: all 5s ease;
+}
+@media screen and  (max-width: 1165px) {
+    .home .profile-img {
+        max-width: 45%;
     }
-    .navbar .menu-btn i.active::before {
-        content: ('\f00d');
+    .home .profile-img img {
+        width: 95%;
     }
+    .home .home-parts .myinfo .text-1 {
+        font-size: 2.7rem;
+        margin-bottom: 1em;
+    }
+    .home .home-parts .myinfo .text-2 {
+        font-size: 5rem;
+        margin-bottom: .5em;
+    }
+    
 }

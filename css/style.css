@@ -36,6 +36,7 @@ a {
   font-family: 'Roboto' , sans-serif;
   position: fixed;
   padding: 30px 0;
+  z-index: 5;
 }
 
 .navbar.change {
@@ -96,6 +97,50 @@ a {
   display: none;
 }
 
+@media screen and (max-width: 950px) {
+  .navbar .menu {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #0f000b;
+    text-align: center;
+    padding-top: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3rem;
+    font-size: 4rem;
+    left: -100%;
+    -webkit-transform: all 5s ease;
+            transform: all 5s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .max-width .menu li {
+    margin-bottom: 2em;
+  }
+  .navbar .max-width .menu li a {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .navbar .max-width .menu-btn {
+    display: block;
+    z-index: 900;
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease;
+  }
+  .navbar .menu-btn i.active::before {
+    content: "";
+  }
+}
+
 /*End navbar*/
 .home {
   height: 100vh;
@@ -119,10 +164,6 @@ a {
           align-items: center;
 }
 
-.home .home-parts .myinfo {
-  margin: auto 0 auto 40px;
-}
-
 .home .home-parts .myinfo .text-1 {
   font-size: 2.7rem;
 }
@@ -136,6 +177,7 @@ a {
 .home .home-parts .myinfo .text-3 {
   font-size: 4rem;
   margin: 5px 0;
+  overflow: hidden;
 }
 
 .home .home-parts .myinfo .text-3 span {
@@ -154,6 +196,24 @@ a {
   background: #0f000b;
   -webkit-animation: typing 4s steps(10) infinite;
           animation: typing 4s steps(10) infinite;
+}
+
+.home a {
+  color: white;
+  display: block;
+  width: 21rem;
+  height: 6rem;
+  border: 2px solid crimson;
+  text-align: center;
+  font-size: 3em;
+  padding: 0.3em;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.home a:hover {
+  color: #fff;
+  background-color: crimson;
 }
 
 .home .box div {
@@ -278,47 +338,32 @@ a {
   }
 }
 
-@media screen and (max-width: 950px) {
-  .navbar .menu {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: #0f000b;
-    text-align: center;
-    padding-top: 2em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 3rem;
-    font-size: 4rem;
-    left: -100%;
-    -webkit-transform: all 5s ease;
-            transform: all 5s ease;
+@media screen and (max-width: 854px) {
+  .hom {
+    max-height: 80%;
   }
-  .navbar .menu.active {
-    left: 0;
+  .home .profile-img img {
+    display: none;
   }
-  .navbar .max-width .menu li {
-    margin-bottom: 2em;
+  .home a {
+    margin-top: 4em;
   }
-  .navbar .max-width .menu li a {
-    font-size: 4rem;
-    font-weight: bold;
+}
+
+@media screen and (max-width: 1165px) {
+  .home .profile-img {
+    max-width: 45%;
   }
-  .navbar .max-width .menu-btn {
-    display: block;
-    z-index: 900;
-    -webkit-transition: all 5s ease;
-    transition: all 5s ease;
+  .home .profile-img img {
+    width: 95%;
   }
-  .navbar .menu-btn i.active::before {
-    content: "";
+  .home .home-parts .myinfo .text-1 {
+    font-size: 2.7rem;
+    margin-bottom: 1em;
+  }
+  .home .home-parts .myinfo .text-2 {
+    font-size: 5rem;
+    margin-bottom: .5em;
   }
 }
 /*# sourceMappingURL=style.css.map */
