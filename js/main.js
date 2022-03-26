@@ -1,3 +1,4 @@
+//for change background color of header
 let nav =document.querySelector('.navbar');
 let navSpan = document.querySelector(".logo span ");
 let typingAfter = document.querySelector('.text-3 span');
@@ -22,5 +23,16 @@ let letter = '';
     }
     curentText = texts[count];
     letter = curentText.slice(0,++index);
-    document.querySelector('.')
+   
 }());
+
+//for navbar in small screen
+let navMenu = document.querySelector(' .menu');
+let btnMenu = document.querySelector('.navbar .max-width .menu-btn');
+let closeMenu = document.querySelector('.navbar .max-width .menu-btn i');
+console.log(closeMenu);
+
+btnMenu.addEventListener('click',function () {
+    navMenu.classList.toggle('active');
+    closeMenu.classList.toggle('active');
+});
