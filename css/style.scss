@@ -28,6 +28,38 @@ a {
     width: 95%;
 
 }
+.commen-header{
+    text-align: center;
+    margin-bottom: 6em;
+    h2 {
+        font-size: 5rem;
+        font-family: sans-serif;
+        margin-bottom: 0.4em;
+    }
+    span {
+        display: block;
+        display: block;
+        font-size: 3rem;
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            top: 20px;
+            background-color: crimson;
+        }
+        &::before {
+            left: -56%;
+        }
+        &::after {
+            right: -56%;
+        }
+    }
+}
 @mixin btun {
     display: block;
     height: 6rem;
@@ -44,6 +76,7 @@ a {
 @mixin separator-section {
     padding-top: 4em;
     padding-bottom: 4em;
+    margin-top: 2em;
 }
 /*Starrt navbar*/
 .navbar {
@@ -299,41 +332,9 @@ a {
     }
     
 }
-/*start about me section*/
+                                                                                                /*start about me section*/
 .about-me {
     @include separator-section;
-    .i-am{
-        text-align: center;
-        margin-bottom: 6em;
-        h2 {
-            font-size: 5rem;
-            font-family: sans-serif;
-            margin-bottom: 0.1em;
-        }
-        span {
-            display: block;
-            display: block;
-            font-size: 3rem;
-            position: relative;
-            width: fit-content;
-            margin: auto;
-            &::after,
-            &::before {
-                content: '';
-                position: absolute;
-                width: 50px;
-                height: 2px;
-                top: 20px;
-                background-color: crimson;
-            }
-            &::before {
-                left: -56%;
-            }
-            &::after {
-                right: -56%;
-            }
-        }
-    }
     .about-me-info {
         display: flex;
         justify-content: space-between;
@@ -342,7 +343,7 @@ a {
             width: 40%;
             img {
                 max-width: 100%;
-                padding-bottom: 8em;
+                padding-bottom: 13em;
             }
         }
         .about-detail {
@@ -395,4 +396,157 @@ a {
         width: 45%;
     }
 }
+@media (max-width: 280px) {
+    .about-me .about-me-info {
+        flex-direction: column;
+    }
+    .commen-header span::before {
+        left: -100%;
+        top: 13px;
+    }
+    .commen-header span::after {
+        right: -100%;
+        top: 13px;
+    }
+    .about-me .about-me-info .about-img {
+        width: 100%;
+    }
+    .about-me .about-me-info .about-img img {
+        padding-bottom: 5em;
+    }
+    .about-me .about-me-info .about-detail {
+        width: 100%;
+    } 
+    .about-me .about-me-info .about-detail h3 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .about-me .about-me-info .about-detail {
+        width: 100%;
+    }
+    .about-me .about-me-info .about-detail .btn {
+        margin: 2em auto .5em;
+        font-size: 1.8em;
+    }
+    .about-me .about-me-info .about-detail p {
+        font-size: 1.4rem;
+    }
+}
 /*end about me section*/
+                                                                                                       /*Start our services*/
+.services {
+    padding-top: 9em;
+    padding-bottom: 11em;
+    margin-top: 2em;
+    background-color: #0f000b;
+    color: #fff;
+    .our-services {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        .services-info {
+            background-color: #2e292d;
+            text-align: center;
+            padding: 2em;
+            width: 31%;
+            border-radius: 5px;
+            transition: background-color .5s ease ;
+            &:hover {
+                background-color: $crisClr;
+                transform: translateY(2px);
+                i {
+                    color: $bg;
+                }
+            }
+            i {
+                color: $crisClr;
+                font-size: 4rem;
+                display: block;
+                margin-bottom: 0.6em;
+                margin-top: 0.5em;
+            }
+            h3 {
+                font-size: 3rem;
+                margin-bottom: 0.5em;
+            }
+            p {
+                font-size: 2.3rem;
+                line-height: 1.6;
+                font-family: 'Poppine, sans-serif';
+                color: #f3f1ed;
+                margin: 1em 0 1.2em;
+            }
+        }
+    }
+}  
+@media (max-width: 1374px) {
+    .services .our-services .services-info h3 {
+        font-size: 2.5rem;
+    }
+}  
+@media (max-width: 1198px) {
+    .services .our-services .services-info h3 {
+        font-size: 2rem;
+    }
+    .services .our-services .services-info p {
+        font-size: 2.1rem;
+    }
+    .commen-header h2 {
+        font-size: 4rem;
+    }
+} 
+@media (max-width: 1007px) {
+    .commen-header h2 {
+        font-size: 3rem;
+    }
+    .commen-header span {
+    font-size: 2rem;
+    }
+    .services .our-services .services-info h3 {
+        font-size: 1.6rem;
+    }
+    .services .our-services .services-info p {
+        font-size: 1.8rem;
+    }
+
+}  
+@media (max-width:857px) {
+    .services .our-services .services-info h3 {
+        font-size: 2.5rem;
+    }
+    .services .our-services {
+        flex-wrap: wrap;
+        gap: 5rem;
+        flex-direction: column;
+    }
+    .services .our-services .services-info {
+        width: 100%;
+    }
+
+}
+@media (max-width: 280px) {
+    .container {
+        padding: 0 14px;
+        width: 95%;
+    }
+    .commen-header h2 {
+        font-size: 2.6rem;
+    }
+    .services .our-services .services-info h3 {
+        font-size: 1.6rem;
+    }
+    .services .our-services .services-info p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .commen-header span::before {
+        left: -50%;
+        top: 13px;
+    }
+    .commen-header span::after {
+        right: -50%;
+        top: 13px;
+    }
+}
+                                                                                             
+/*End our services*/

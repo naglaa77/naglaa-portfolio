@@ -30,6 +30,45 @@ a {
   width: 95%;
 }
 
+.commen-header {
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.commen-header h2 {
+  font-size: 5rem;
+  font-family: sans-serif;
+  margin-bottom: 0.4em;
+}
+
+.commen-header span {
+  display: block;
+  display: block;
+  font-size: 3rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.commen-header span::after, .commen-header span::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: 20px;
+  background-color: crimson;
+}
+
+.commen-header span::before {
+  left: -56%;
+}
+
+.commen-header span::after {
+  right: -56%;
+}
+
 /*Starrt navbar*/
 .navbar {
   width: 100%;
@@ -377,45 +416,7 @@ a {
 .about-me {
   padding-top: 4em;
   padding-bottom: 4em;
-}
-
-.about-me .i-am {
-  text-align: center;
-  margin-bottom: 6em;
-}
-
-.about-me .i-am h2 {
-  font-size: 5rem;
-  font-family: sans-serif;
-  margin-bottom: 0.1em;
-}
-
-.about-me .i-am span {
-  display: block;
-  display: block;
-  font-size: 3rem;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-}
-
-.about-me .i-am span::after, .about-me .i-am span::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  top: 20px;
-  background-color: crimson;
-}
-
-.about-me .i-am span::before {
-  left: -56%;
-}
-
-.about-me .i-am span::after {
-  right: -56%;
+  margin-top: 2em;
 }
 
 .about-me .about-me-info {
@@ -436,7 +437,7 @@ a {
 
 .about-me .about-me-info .about-img img {
   max-width: 100%;
-  padding-bottom: 8em;
+  padding-bottom: 13em;
 }
 
 .about-me .about-me-info .about-detail {
@@ -503,5 +504,182 @@ a {
   }
 }
 
+@media (max-width: 280px) {
+  .about-me .about-me-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .commen-header span::before {
+    left: -100%;
+    top: 13px;
+  }
+  .commen-header span::after {
+    right: -100%;
+    top: 13px;
+  }
+  .about-me .about-me-info .about-img {
+    width: 100%;
+  }
+  .about-me .about-me-info .about-img img {
+    padding-bottom: 5em;
+  }
+  .about-me .about-me-info .about-detail {
+    width: 100%;
+  }
+  .about-me .about-me-info .about-detail h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .about-me .about-me-info .about-detail {
+    width: 100%;
+  }
+  .about-me .about-me-info .about-detail .btn {
+    margin: 2em auto .5em;
+    font-size: 1.8em;
+  }
+  .about-me .about-me-info .about-detail p {
+    font-size: 1.4rem;
+  }
+}
+
 /*end about me section*/
+/*Start our services*/
+.services {
+  padding-top: 9em;
+  padding-bottom: 11em;
+  margin-top: 2em;
+  background-color: #0f000b;
+  color: #fff;
+}
+
+.services .our-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.services .our-services .services-info {
+  background-color: #2e292d;
+  text-align: center;
+  padding: 2em;
+  width: 31%;
+  border-radius: 5px;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+.services .our-services .services-info:hover {
+  background-color: crimson;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.services .our-services .services-info:hover i {
+  color: #0f000b;
+}
+
+.services .our-services .services-info i {
+  color: crimson;
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 0.6em;
+  margin-top: 0.5em;
+}
+
+.services .our-services .services-info h3 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.services .our-services .services-info p {
+  font-size: 2.3rem;
+  line-height: 1.6;
+  font-family: 'Poppine, sans-serif';
+  color: #f3f1ed;
+  margin: 1em 0 1.2em;
+}
+
+@media (max-width: 1374px) {
+  .services .our-services .services-info h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1198px) {
+  .services .our-services .services-info h3 {
+    font-size: 2rem;
+  }
+  .services .our-services .services-info p {
+    font-size: 2.1rem;
+  }
+  .commen-header h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1007px) {
+  .commen-header h2 {
+    font-size: 3rem;
+  }
+  .commen-header span {
+    font-size: 2rem;
+  }
+  .services .our-services .services-info h3 {
+    font-size: 1.6rem;
+  }
+  .services .our-services .services-info p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 857px) {
+  .services .our-services .services-info h3 {
+    font-size: 2.5rem;
+  }
+  .services .our-services {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services .our-services .services-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 280px) {
+  .container {
+    padding: 0 14px;
+    width: 95%;
+  }
+  .commen-header h2 {
+    font-size: 2.6rem;
+  }
+  .services .our-services .services-info h3 {
+    font-size: 1.6rem;
+  }
+  .services .our-services .services-info p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .commen-header span::before {
+    left: -50%;
+    top: 13px;
+  }
+  .commen-header span::after {
+    right: -50%;
+    top: 13px;
+  }
+}
+
+/*End our services*/
 /*# sourceMappingURL=style.css.map */
