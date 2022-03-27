@@ -9,6 +9,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,7 +26,7 @@ a {
 
 .container {
   max-width: 1400px;
-  padding: 0 54px;
+  padding: 0 30px;
   margin: auto;
   width: 95%;
 }
@@ -180,6 +181,25 @@ a {
   }
 }
 
+@media (max-width: 760px) {
+  .navbar .max-width .logo a {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar .menu {
+    height: 100vh;
+  }
+  .navbar .max-width .menu li {
+    margin-bottom: 0em;
+  }
+  .navbar .max-width .menu li a {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
 /*End navbar*/
 .home {
   height: 100vh;
@@ -191,7 +211,12 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
-.home .home-parts {
+.home .container {
+  position: relative;
+  overflow: hidden;
+}
+
+.home .container .home-parts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,41 +228,30 @@ a {
           align-items: center;
 }
 
-.home .home-parts .myinfo .text-1 {
+.home .container .home-parts .myinfo .text-1 {
   font-size: 2.7rem;
 }
 
-.home .home-parts .myinfo .text-2 {
+.home .container .home-parts .myinfo .text-2 {
   font-size: 7.5rem;
   margin-left: -3px;
   font-weight: 600;
 }
 
-.home .home-parts .myinfo .text-3 {
+.home .container .home-parts .myinfo .text-3 {
   font-size: 4rem;
   margin: 5px 0;
   overflow: hidden;
 }
 
-.home .home-parts .myinfo .text-3 span {
+.home .container .home-parts .myinfo .text-3 span {
   font-weight: 600;
   color: crimson;
   position: relative;
   display: inline-block;
 }
 
-.home .home-parts .myinfo .text-3 span::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #0f000b;
-  -webkit-animation: typing 4s steps(10) infinite;
-          animation: typing 4s steps(10) infinite;
-}
-
-.home .home-parts .myinfo a {
+.home .container .home-parts .myinfo a {
   display: block;
   height: 6rem;
   border: 2px solid crimson;
@@ -251,17 +265,17 @@ a {
   margin-top: 2em;
 }
 
-.home .home-parts .myinfo a:hover {
+.home .container .home-parts .myinfo a:hover {
   color: #fff;
   background-color: crimson;
 }
 
-.home .home-parts .myinfo a:hover {
+.home .container .home-parts .myinfo a:hover {
   color: #fff;
   background-color: crimson;
 }
 
-.home .box div {
+.home .container .box div {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -269,70 +283,70 @@ a {
   border: 5px solid crimson;
 }
 
-.home .box div:nth-child(1) {
+.home .container .box div:nth-child(1) {
   top: 12%;
   left: 42%;
   -webkit-animation: move 10s linear infinite;
           animation: move 10s linear infinite;
 }
 
-.home .box div:nth-child(2) {
+.home .container .box div:nth-child(2) {
   top: 70%;
   left: 50%;
   -webkit-animation: move 7s linear infinite;
           animation: move 7s linear infinite;
 }
 
-.home .box div:nth-child(3) {
+.home .container .box div:nth-child(3) {
   top: 18%;
   left: 7%;
   -webkit-animation: move 9s linear infinite;
           animation: move 9s linear infinite;
 }
 
-.home .box div:nth-child(4) {
+.home .container .box div:nth-child(4) {
   top: 24%;
   left: 58%;
   -webkit-animation: move 7s linear infinite;
           animation: move 7s linear infinite;
 }
 
-.home .box div:nth-child(5) {
+.home .container .box div:nth-child(5) {
   top: 90%;
   left: 23%;
   -webkit-animation: move 5s linear infinite;
           animation: move 5s linear infinite;
 }
 
-.home .box div:nth-child(6) {
+.home .container .box div:nth-child(6) {
   top: 80%;
   left: 70%;
   -webkit-animation: move 12s linear infinite;
           animation: move 12s linear infinite;
 }
 
-.home .box div:nth-child(7) {
+.home .container .box div:nth-child(7) {
   top: 60%;
   left: 80%;
   -webkit-animation: move 14s linear infinite;
           animation: move 14s linear infinite;
 }
 
-.home .box div:nth-child(8) {
+.home .container .box div:nth-child(8) {
   top: 12%;
   left: 42%;
   -webkit-animation: move 10s linear infinite;
           animation: move 10s linear infinite;
 }
 
-.home .box div:nth-child(9) {
+.home .container .box div:nth-child(9) {
   top: 25%;
   left: 50%;
   -webkit-animation: move 9s linear infinite;
           animation: move 9s linear infinite;
 }
 
-.home .box div:nth-child(10) {
+.home .container .box div:nth-child(10) {
   top: 75%;
   left: 90%;
   -webkit-animation: move 5s linear infinite;
@@ -365,24 +379,6 @@ a {
   }
 }
 
-@-webkit-keyframes typing {
-  40%, 60% {
-    left: calc(100% + 10px);
-  }
-  100% {
-    left: 0%;
-  }
-}
-
-@keyframes typing {
-  40%, 60% {
-    left: calc(100% + 10px);
-  }
-  100% {
-    left: 0%;
-  }
-}
-
 @media screen and (max-width: 854px) {
   .hom {
     max-height: 80%;
@@ -409,6 +405,43 @@ a {
   .home .home-parts .myinfo .text-2 {
     font-size: 5rem;
     margin-bottom: .5em;
+  }
+}
+
+@media (max-width: 760px) {
+  .home .container .home-parts .myinfo .text-2 {
+    font-size: 3.5rem;
+  }
+  .myinfo .text-1 {
+    font-size: 2rem;
+  }
+  .myinfo .text-3 {
+    font-size: 2rem;
+  }
+  .home .container .home-parts .myinfo a {
+    height: 4rem;
+    width: 15rem;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 280px) {
+  .home {
+    height: 56vh;
+  }
+  .home .home-parts .myinfo .text-2 {
+    font-size: 3rem;
+  }
+  .home .home-parts .myinfo .text-1 {
+    font-size: 2rem;
+  }
+  .home .home-parts .myinfo .text-3 {
+    font-size: 3rem;
+  }
+  .home .home-parts .myinfo a {
+    height: 4rem;
+    width: 14rem;
+    font-size: 2em;
   }
 }
 
@@ -454,6 +487,7 @@ a {
   text-align: justify;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  color: #3c3939;
 }
 
 .about-me .about-me-info .about-detail .btn {
@@ -504,18 +538,68 @@ a {
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 760px) {
+  .commen-header h2 {
+    font-size: 4rem;
+  }
+  .commen-header span {
+    font-size: 2.5rem;
+  }
+  .commen-header span::after,
+  .commen-header span::before {
+    top: 14px;
+  }
   .about-me .about-me-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .commen-header span::before {
+  .about-me .commen-header span::before {
     left: -100%;
     top: 13px;
   }
-  .commen-header span::after {
+  .about-me .commen-header span::after {
+    right: -100%;
+    top: 13px;
+  }
+  .about-me .about-me-info .about-img {
+    width: 80%;
+  }
+  .about-me .about-me-info .about-img img {
+    padding-bottom: 5em;
+  }
+  .about-me .about-me-info .about-detail {
+    width: 100%;
+  }
+  .about-me .about-me-info .about-detail h3 {
+    font-size: 4rem;
+  }
+  .about-me .about-me-info .about-detail {
+    width: 100%;
+    text-align: center;
+  }
+  .about-me .about-me-info .about-detail .btn {
+    margin: 2em auto .5em;
+    font-size: 1.8em;
+  }
+  .about-me .about-me-info .about-detail p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .about-me .about-me-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-me .commen-header span::before {
+    left: -100%;
+    top: 13px;
+  }
+  .about-me .commen-header span::after {
     right: -100%;
     top: 13px;
   }
@@ -567,7 +651,8 @@ a {
 .services .our-services .services-info {
   background-color: #2e292d;
   text-align: center;
-  padding: 2em;
+  word-wrap: break-word;
+  padding: 1em;
   width: 31%;
   border-radius: 5px;
   -webkit-transition: background-color .5s ease;
@@ -678,6 +763,9 @@ a {
   .commen-header span::after {
     right: -50%;
     top: 13px;
+  }
+  .services .our-services .services-info i {
+    font-size: 3rem;
   }
 }
 
