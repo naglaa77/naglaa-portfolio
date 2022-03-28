@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  height: 3000px;
+  height: 6000px;
 }
 
 ul {
@@ -26,7 +26,7 @@ a {
 
 .container {
   max-width: 1400px;
-  padding: 0 30px;
+  padding: 0 15px;
   margin: auto;
   width: 95%;
 }
@@ -770,4 +770,154 @@ a {
 }
 
 /*End our services*/
+/*Start skills*/
+.skills {
+  margin-top: 5em;
+}
+
+.skills .container {
+  width: 100%;
+}
+
+.skills .container .commen-header {
+  margin-bottom: 4em;
+}
+
+.skills .skills-contant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skills .skills-contant .column {
+  width: 100%;
+}
+
+.skills .skills-contant .column.left h3 {
+  font-size: 1.9rem;
+  font-family: 'Poppin', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.skills .skills-contant .column.left p {
+  font-size: 2rem;
+  font-family: 'Poppin', sans-serif;
+  line-height: 1.7;
+  margin-bottom: 1.5em;
+  color: #140f0fdb;
+}
+
+.skills .skills-contant .column.right .bars {
+  margin-bottom: 2em;
+}
+
+.skills .skills-contant .column.right .bars .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.skills .skills-contant .column.right .bars .info span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.skills .skills-contant .column.right .bars .line {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 7px;
+  background-color: #ebe5e5;
+  width: 100%;
+}
+
+.skills .skills-contant .column.right .bars .line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: crimson;
+}
+
+.skills .skills-contant .column.right .bars .line.html::before {
+  width: 90%;
+}
+
+.skills .skills-contant .column.right .bars .line.css::before {
+  width: 80%;
+}
+
+.skills .skills-contant .column.right .bars .line.scss::before {
+  width: 70%;
+}
+
+.skills .skills-contant .column.right .bars .line.js::before {
+  width: 90%;
+}
+
+.skills .skills-contant .column.right .bars .line.php::before {
+  width: 90%;
+}
+
+.skills .skills-contant .column.right .bars .line.mysql::before {
+  width: 90%;
+}
+
+@media (min-width: 550px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: auto;
+    width: 95%;
+  }
+  .skills .skills-contant .column.right .bars {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 857px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: auto;
+    width: 95%;
+  }
+  .skills .skills-contant {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .skills .skills-contant .column {
+    width: 44%;
+  }
+  .skills .skills-contant .column.left p {
+    font-size: 2.5rem;
+    text-align: justify;
+  }
+  .skills .skills-contant .column.left h3 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1124px) {
+  .skills .container .commen-header {
+    margin-bottom: 9em;
+  }
+}
+
+/*End skills*/
 /*# sourceMappingURL=style.css.map */

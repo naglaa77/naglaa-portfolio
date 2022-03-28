@@ -14,7 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    height: 3000px;
+    height: 6000px;
 }
 ul {
     list-style: none;
@@ -24,7 +24,7 @@ a {
 }
 .container {
     max-width: 1400px;
-    padding: 0 30px;
+    padding: 0 15px;
     margin: auto;
     width: 95%;
 
@@ -643,3 +643,127 @@ a {
 }
                                                                                              
 /*End our services*/
+                                                                             /*Start skills*/
+.skills {
+    margin-top: 5em;
+    .container {
+        width: 100%;
+        .commen-header {
+            margin-bottom: 4em;
+        }
+    }
+    .skills-contant {
+        display: flex;
+        flex-direction: column;
+        .column {
+            width: 100%;
+            &.left {
+                h3 {
+                    font-size: 1.9rem;
+                    font-family: 'Poppin', sans-serif;
+                    font-weight: bold;
+                    margin-bottom: 1em;
+                }
+                p {
+                    font-size: 2rem;
+                    font-family: 'Poppin', sans-serif;
+                    line-height: 1.7;
+                    margin-bottom: 1.5em;
+                    color: #140f0fdb;;
+                }
+            }
+            &.right {
+                .bars {
+                    margin-bottom: 2em;
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 2em;
+                        span {
+                            font-weight: bold;
+                            font-size: 2rem;
+                        }
+                    }
+                    .line {
+                    
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        height: 7px;
+                        background-color: #ebe5e5;
+                        width: 100%;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            background-color: $crisClr;
+                        }
+                        &.html::before {
+                            width: 90%;
+                        }
+                        &.css::before {
+                            width: 80%;
+                        }
+                        &.scss::before {
+                            width: 70%;
+                        }
+                        &.js::before {
+                            width: 90%;
+                        }
+                        &.php::before {
+                            width: 90%;
+                        }
+                        &.mysql::before {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+} 
+@media (min-width: 550px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 15px;
+        margin: auto;
+        width: 95%;
+    
+    }
+    .skills .skills-contant .column.right .bars {
+        max-width: 85%;
+    }
+} 
+@media (min-width: 857px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 15px;
+        margin: auto;
+        width: 95%;
+    
+    }
+    .skills .skills-contant {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .skills .skills-contant .column {
+        width: 44%;
+    }
+    .skills .skills-contant .column.left p {
+        font-size: 2.5rem;
+        text-align: justify;
+    }
+    .skills .skills-contant .column.left h3 {
+        font-size: 2.3rem;
+    }
+
+} 
+@media (min-width: 1124px) {
+    .skills .container .commen-header {
+        margin-bottom: 9em;
+    }
+}                                                                                                                                                    
+/*End skills*/
