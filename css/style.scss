@@ -775,6 +775,7 @@ a {
     background-color: $bg;
     min-height: 100vh;
     opacity: 0;
+    margin-top: 4em;
     &.active {
         opacity: 1;
     }
@@ -783,8 +784,9 @@ a {
     }
     .all-project {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: 1fr;
         grid-gap: 50px;
+        position: relative;
         .project-card {
             height: 400px;
             position: relative;
@@ -799,17 +801,16 @@ a {
             .project-content {
                 position: relative;
                 color: white;
-                padding: 6em;
-                font-size: 2.5rem;
                 font-family: 'Poppin' ,sans-serif;
                 transition: .5s;
                 opacity: 0;
+                padding: 3em;
                 h3 {
-                    font-size: 4rem;
+                    font-size: 2.3rem;
                     text-align: center;
                 }
                 p {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     text-align: center;
                     line-height: 1.6;
                     margin-top: 1em;
@@ -820,7 +821,7 @@ a {
                     gap: 20px;
                     .project-btn {
                         height: 40px;
-                        font-size: 2rem;
+                        font-size: 1.2rem;
                         color: $text;
                         background-color: $bg;
                         border-radius: 5px;
@@ -831,6 +832,13 @@ a {
                         &.live {
                             background: none;
                             border: 2px solid $text;
+                            &:hover {
+                                background-color: $crisClr;
+                            }
+                        }
+                        &.github:hover {
+                            background-color: $text;
+                            color: $crisClr;
                         }
                     }
                 }
@@ -844,6 +852,35 @@ a {
                 }            
             }
         }
+    }
+}
+@media (min-width: 800px) {
+    .projects .all-project {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width: 1190px) {
+    .projects .all-project .project-card .project-content {
+        max-width: 60%;
+        margin: auto;
+    }
+}
+@media (min-width: 447px) {
+    .projects .all-project .project-card .project-content {
+        max-width: 70%;
+        margin: auto;
+    }
+}
+@media (max-width: 280px) {
+    .projects .all-project .project-card .project-content h3 {
+        font-size: 2.5rem;
+    }
+    .projects .all-project .project-card .project-content p {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
+        font-size: 1.2rem;
     }
 }
 /*End projects*/

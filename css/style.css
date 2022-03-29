@@ -929,6 +929,7 @@ a {
   background-color: #0f000b;
   min-height: 100vh;
   opacity: 0;
+  margin-top: 4em;
 }
 
 .projects.active {
@@ -942,9 +943,10 @@ a {
 .projects .all-project {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   grid-gap: 50px;
+  position: relative;
 }
 
 .projects .all-project .project-card {
@@ -965,21 +967,20 @@ a {
 .projects .all-project .project-card .project-content {
   position: relative;
   color: white;
-  padding: 6em;
-  font-size: 2.5rem;
   font-family: 'Poppin' ,sans-serif;
   -webkit-transition: .5s;
   transition: .5s;
   opacity: 0;
+  padding: 3em;
 }
 
 .projects .all-project .project-card .project-content h3 {
-  font-size: 4rem;
+  font-size: 2.3rem;
   text-align: center;
 }
 
 .projects .all-project .project-card .project-content p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   line-height: 1.6;
   margin-top: 1em;
@@ -995,7 +996,7 @@ a {
 
 .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
   height: 40px;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: #fff;
   background-color: #0f000b;
   border-radius: 5px;
@@ -1010,6 +1011,15 @@ a {
   border: 2px solid #fff;
 }
 
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.live:hover {
+  background-color: crimson;
+}
+
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.github:hover {
+  background-color: #fff;
+  color: crimson;
+}
+
 .projects .all-project .project-card:hover .img-project {
   -webkit-filter: blur(20px);
           filter: blur(20px);
@@ -1017,6 +1027,40 @@ a {
 
 .projects .all-project .project-card:hover .project-content {
   opacity: 1;
+}
+
+@media (min-width: 800px) {
+  .projects .all-project {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1190px) {
+  .projects .all-project .project-card .project-content {
+    max-width: 60%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 447px) {
+  .projects .all-project .project-card .project-content {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 280px) {
+  .projects .all-project .project-card .project-content h3 {
+    font-size: 2.5rem;
+  }
+  .projects .all-project .project-card .project-content p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
+    font-size: 1.2rem;
+  }
 }
 
 /*End projects*/
