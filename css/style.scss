@@ -767,3 +767,83 @@ a {
     }
 }                                                                                                                                                    
 /*End skills*/
+
+/*Start projects*/
+.projects {
+    @include separator-section;
+    width: 100%;
+    background-color: $bg;
+    min-height: 100vh;
+    opacity: 0;
+    &.active {
+        opacity: 1;
+    }
+    .commen-header {
+        color: $text;
+    }
+    .all-project {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 50px;
+        .project-card {
+            height: 400px;
+            position: relative;
+            .img-project{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .project-content {
+                position: relative;
+                color: white;
+                padding: 6em;
+                font-size: 2.5rem;
+                font-family: 'Poppin' ,sans-serif;
+                transition: .5s;
+                opacity: 0;
+                h3 {
+                    font-size: 4rem;
+                    text-align: center;
+                }
+                p {
+                    font-size: 2rem;
+                    text-align: center;
+                    line-height: 1.6;
+                    margin-top: 1em;
+                }
+                .project-btn-grp {
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    gap: 20px;
+                    .project-btn {
+                        height: 40px;
+                        font-size: 2rem;
+                        color: $text;
+                        background-color: $bg;
+                        border-radius: 5px;
+                        border: none;
+                        margin-top: 1em;
+                        text-transform: capitalize;
+                        cursor: pointer;
+                        &.live {
+                            background: none;
+                            border: 2px solid $text;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .img-project {
+                    filter: blur(20px);
+                }
+                .project-content {
+                    opacity: 1;
+                }            
+            }
+        }
+    }
+}
+/*End projects*/

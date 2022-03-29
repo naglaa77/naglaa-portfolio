@@ -920,4 +920,104 @@ a {
 }
 
 /*End skills*/
+/*Start projects*/
+.projects {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin-top: 2em;
+  width: 100%;
+  background-color: #0f000b;
+  min-height: 100vh;
+  opacity: 0;
+}
+
+.projects.active {
+  opacity: 1;
+}
+
+.projects .commen-header {
+  color: #fff;
+}
+
+.projects .all-project {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.projects .all-project .project-card {
+  height: 400px;
+  position: relative;
+}
+
+.projects .all-project .project-card .img-project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projects .all-project .project-card .project-content {
+  position: relative;
+  color: white;
+  padding: 6em;
+  font-size: 2.5rem;
+  font-family: 'Poppin' ,sans-serif;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+}
+
+.projects .all-project .project-card .project-content h3 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.projects .all-project .project-card .project-content p {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 1em;
+}
+
+.projects .all-project .project-card .project-content .project-btn-grp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn {
+  height: 40px;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #0f000b;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1em;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.live {
+  background: none;
+  border: 2px solid #fff;
+}
+
+.projects .all-project .project-card:hover .img-project {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+.projects .all-project .project-card:hover .project-content {
+  opacity: 1;
+}
+
+/*End projects*/
 /*# sourceMappingURL=style.css.map */
