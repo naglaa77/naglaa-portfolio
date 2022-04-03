@@ -12,10 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  height: 6000px;
-}
-
 ul {
   list-style: none;
 }
@@ -850,7 +846,7 @@ a {
 }
 
 .skills .skills-contant .column.right .bars .line.html::before {
-  width: 90%;
+  width: 80%;
 }
 
 .skills .skills-contant .column.right .bars .line.css::before {
@@ -858,19 +854,19 @@ a {
 }
 
 .skills .skills-contant .column.right .bars .line.scss::before {
-  width: 70%;
+  width: 60%;
 }
 
 .skills .skills-contant .column.right .bars .line.js::before {
-  width: 90%;
+  width: 70%;
 }
 
 .skills .skills-contant .column.right .bars .line.php::before {
-  width: 90%;
+  width: 60%;
 }
 
 .skills .skills-contant .column.right .bars .line.mysql::before {
-  width: 90%;
+  width: 50%;
 }
 
 @media (min-width: 550px) {
@@ -1064,4 +1060,227 @@ a {
 }
 
 /*End projects*/
+/****Sart contact section****/
+.all-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.all-contact .map h4 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.all-contact .map p {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+.all-contact .map .my-info {
+  margin-bottom: 3em;
+}
+
+.all-contact .map .my-info .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 19px;
+  margin-bottom: 2em;
+}
+
+.all-contact .map .my-info .info i {
+  content: "\f007";
+  color: crimson;
+  font-size: 2rem;
+}
+
+.all-contact .map .my-info .info .info-detail p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.all-contact .map .my-info .info .info-detail span {
+  font-size: 1.7rem;
+  font-family: 'Poppins',sans-serif;
+  color: #5c4d4d;
+}
+
+.all-contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.3em;
+  margin-bottom: 4em;
+}
+
+.all-contact form input,
+.all-contact form textarea,
+.all-contact form button {
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #efe5e88f;
+}
+
+.all-contact form input::-webkit-input-placeholder,
+.all-contact form textarea::-webkit-input-placeholder,
+.all-contact form button::-webkit-input-placeholder {
+  font-size: 1.5rem;
+}
+
+.all-contact form input:-ms-input-placeholder,
+.all-contact form textarea:-ms-input-placeholder,
+.all-contact form button:-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+
+.all-contact form input::-ms-input-placeholder,
+.all-contact form textarea::-ms-input-placeholder,
+.all-contact form button::-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+
+.all-contact form input::placeholder,
+.all-contact form textarea::placeholder,
+.all-contact form button::placeholder {
+  font-size: 1.5rem;
+}
+
+.all-contact form button {
+  font-size: 1.6rem;
+  color: #0f000b;
+}
+
+.all-contact form button:hover {
+  background-color: crimson;
+  color: #fff;
+}
+
+@media (max-width: 280px) {
+  .contact {
+    padding-top: 4em;
+    padding-bottom: 2em;
+  }
+  .commen-header span::before {
+    left: -64px;
+  }
+  .commen-header span::after {
+    right: -64px;
+  }
+  .all-contact .map h4 {
+    font-size: 2.3rem;
+  }
+  .all-contact .map .my-info .info .info-detail span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 281px) {
+  .contact {
+    padding-top: 4em;
+    padding-bottom: 2em;
+  }
+  .all-contact .map .my-info {
+    margin-bottom: 6em;
+  }
+  .all-contact form {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 767px) {
+  .contact .all-contact .my-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .all-contact form {
+    width: 55%;
+    margin: 0;
+  }
+  .contact .all-contact .my-contact .map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1097) {
+  .all-contact form {
+    max-width: 50%;
+    margin: 0;
+  }
+  .contact .all-contact .my-contact .map {
+    width: 40%;
+  }
+}
+
+/*End contact section*/
+/***Start footer***/
+footer {
+  margin-top: 4em;
+  background-color: #0f000b;
+  color: #fff;
+}
+
+footer .copy-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em 0;
+  gap: 2em;
+}
+
+footer .copy-social .copy-Writer p {
+  font-size: 2rem;
+}
+
+footer .copy-social .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .copy-social .social i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+footer .copy-social .social i:hover {
+  color: crimson;
+}
+
+/*End footer*/
 /*# sourceMappingURL=style.css.map */

@@ -13,9 +13,6 @@ html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
-body {
-    height: 6000px;
-}
 ul {
     list-style: none;
 }
@@ -701,22 +698,22 @@ a {
                             background-color: $crisClr;
                         }
                         &.html::before {
-                            width: 90%;
+                            width: 80%;
                         }
                         &.css::before {
                             width: 80%;
                         }
                         &.scss::before {
-                            width: 70%;
+                            width: 60%;
                         }
                         &.js::before {
-                            width: 90%;
+                            width: 70%;
                         }
                         &.php::before {
-                            width: 90%;
+                            width: 60%;
                         }
                         &.mysql::before {
-                            width: 90%;
+                            width: 50%;
                         }
                     }
                 }
@@ -884,3 +881,159 @@ a {
     }
 }
 /*End projects*/
+
+                                                                                         /****Sart contact section****/
+.all-contact {
+    display: flex;
+    flex-direction: column;
+    .map {
+        h4 {
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            line-height: 1.5;
+            margin-bottom: 0.5em;
+        }
+        .my-info {
+            margin-bottom: 3em;
+            .info {
+                display: flex;
+                align-items: center;
+                gap: 19px;
+                margin-bottom: 2em;
+                i {
+                    content: "\f007";
+                    color: $crisClr;
+                    font-size: 2rem;
+                }
+                .info-detail {
+                    p {
+                        font-size: 2rem;
+                        margin: 0;
+                    }
+                    span {
+                        font-size: 1.7rem;
+                        font-family: 'Poppins',sans-serif;
+                        color: #5c4d4d;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3em;
+        margin-bottom: 4em;
+        input,
+        textarea,
+        button {
+            padding: 1em;
+            border-radius: 5px;
+            border:none;
+            outline:none;
+            background-color: #efe5e88f;
+            &::placeholder {
+                font-size: 1.5rem;
+            }
+        }
+        button {
+            font-size: 1.6rem;
+            color: $bg;
+            &:hover {
+                background-color: $crisClr;
+                color: $text;
+            }
+        }
+    }
+}
+@media (max-width: 280px) {
+    .contact {
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+    .commen-header span::before {
+        left: -64px;
+    }
+    .commen-header span::after {
+        right: -64px;
+    }
+    .all-contact .map h4 {
+        font-size: 2.3rem;
+    }
+    .all-contact .map .my-info .info .info-detail span {
+        font-size: 1.4rem; 
+    }
+}
+@media (min-width: 281px) {
+    .contact {
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+    .all-contact .map .my-info {
+        margin-bottom: 6em;
+    }
+    .all-contact form {
+        max-width: 90%;
+        margin: auto;
+    }
+}
+@media (min-width: 767px) {
+    .contact .all-contact .my-contact {
+        display: flex;
+        justify-content: space-between;
+    }
+    .all-contact form {
+        width: 55%;
+        margin: 0;
+    }
+    .contact .all-contact .my-contact .map {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+@media (min-width: 1097) {
+    .all-contact form {
+       max-width: 50%;
+       margin: 0;
+    }
+    .contact .all-contact .my-contact .map {
+        width: 40%;
+    }
+}
+/*End contact section*/
+
+                                                                                                      /***Start footer***/
+footer {
+    margin-top: 4em;
+    background-color: $bg;
+    color: $text;
+    .copy-social {
+        display: flex;
+        flex-direction: column;
+        padding: 2em 0;
+        gap: 2em;
+        .copy-Writer {
+            p {
+                font-size: 2rem;
+            }
+        }
+        .social {
+            display: flex;
+            justify-content: space-around;
+            i {
+                font-size: 2.5rem;
+                color: $text;
+                &:hover {
+                    color: $crisClr;
+                }
+            }
+        }
+    }
+}
+/*End footer*/
