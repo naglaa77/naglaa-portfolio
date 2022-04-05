@@ -532,6 +532,14 @@ a {
   .about-me .about-me-info .about-detail {
     width: 45%;
   }
+  .about-me .commen-header span::before {
+    left: -90%;
+    top: 13px;
+  }
+  .about-me .commen-header span::after {
+    right: -90%;
+    top: 13px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -719,6 +727,17 @@ a {
   }
 }
 
+@media (max-width: 918px) {
+  .services .commen-header span::before {
+    left: -90%;
+    top: 13px;
+  }
+  .services .commen-header span::after {
+    right: -90%;
+    top: 13px;
+  }
+}
+
 @media (max-width: 857px) {
   .services .our-services .services-info h3 {
     font-size: 2.5rem;
@@ -752,11 +771,11 @@ a {
     font-size: 1.5rem;
     text-align: center;
   }
-  .commen-header span::before {
+  .services .commen-header span::before {
     left: -50%;
     top: 13px;
   }
-  .commen-header span::after {
+  .services .commen-header span::after {
     right: -50%;
     top: 13px;
   }
@@ -768,7 +787,8 @@ a {
 /*End our services*/
 /*Start skills*/
 .skills {
-  margin-top: 5em;
+  margin-top: 9em;
+  margin-bottom: 9em;
 }
 
 .skills .container {
@@ -909,6 +929,26 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .skills .commen-header span::before {
+    left: -71%;
+  }
+  .commen-header span::after {
+    right: -71%;
+  }
+}
+
+@media (max-width: 918px) {
+  .skills .commen-header span::before {
+    left: -90%;
+    top: 13px;
+  }
+  .services .commen-header span::after {
+    right: -90%;
+    top: 13px;
+  }
+}
+
 @media (min-width: 1124px) {
   .skills .container .commen-header {
     margin-bottom: 9em;
@@ -926,6 +966,8 @@ a {
   min-height: 100vh;
   opacity: 0;
   margin-top: 4em;
+  padding-top: 9em;
+  padding-bottom: 9em;
 }
 
 .projects.active {
@@ -941,8 +983,10 @@ a {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 50px;
+  grid-gap: 78px;
   position: relative;
+  margin-top: 13em;
+  margin-bottom: 6em;
 }
 
 .projects .all-project .project-card {
@@ -958,6 +1002,7 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 21px;
 }
 
 .projects .all-project .project-card .project-content {
@@ -971,15 +1016,18 @@ a {
 }
 
 .projects .all-project .project-card .project-content h3 {
-  font-size: 2.3rem;
+  font-size: 4.3rem;
   text-align: center;
+  color: crimson;
 }
 
 .projects .all-project .project-card .project-content p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-align: center;
   line-height: 1.6;
   margin-top: 1em;
+  margin-bottom: 2em;
+  color: #0f000bb5;
 }
 
 .projects .all-project .project-card .project-content .project-btn-grp {
@@ -991,7 +1039,7 @@ a {
 }
 
 .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
-  height: 40px;
+  height: 46px;
   font-size: 1.2rem;
   color: #fff;
   background-color: #0f000b;
@@ -1007,13 +1055,30 @@ a {
   border: 2px solid #fff;
 }
 
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.live a {
+  color: crimson;
+  font-size: 1.8em;
+}
+
 .projects .all-project .project-card .project-content .project-btn-grp .project-btn.live:hover {
   background-color: crimson;
 }
 
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.live:hover a {
+  color: #fff;
+}
+
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
+  color: #fff;
+  font-size: 1.8em;
+}
+
 .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github:hover {
   background-color: #fff;
-  color: crimson;
+}
+
+.projects .all-project .project-card .project-content .project-btn-grp .project-btn.github:hover a {
+  color: #0f000b;
 }
 
 .projects .all-project .project-card:hover .img-project {
@@ -1030,6 +1095,35 @@ a {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  .commen-header span::after, .commen-header span::before {
+    top: 14px;
+  }
+  .commen-header span::before {
+    left: -94%;
+  }
+  .commen-header span::after {
+    right: -94%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.live a,
+  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1082px) {
+  .projects .all-project .project-content .project-btn-grp .project-btn.live a,
+  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
+    font-size: 1.2em;
+  }
+  .projects .all-project .project-card .project-content p {
+    font-size: 2rem;
+  }
+  .projects .all-project .project-card .project-content h3 {
+    font-size: 3.8rem;
+  }
 }
 
 @media (min-width: 1190px) {
@@ -1044,9 +1138,27 @@ a {
     max-width: 70%;
     margin: auto;
   }
+  .projects {
+    padding-bottom: 2em;
+  }
+  .projects .all-project {
+    margin-top: 9em;
+  }
+}
+
+@media (min-width: 281px) {
+  .projects {
+    padding-bottom: 2em;
+  }
+  .projects .all-project {
+    margin-top: 9em;
+  }
 }
 
 @media (max-width: 280px) {
+  .projects {
+    padding-bottom: 2em;
+  }
   .projects .all-project .project-card .project-content h3 {
     font-size: 2.5rem;
   }
@@ -1056,6 +1168,48 @@ a {
   }
   .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
     font-size: 1.2rem;
+  }
+  .projects .all-project {
+    margin-top: 9em;
+  }
+}
+
+@media (max-width: 970px) {
+  .projects .all-project .project-content .project-btn-grp .project-btn.live a,
+  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
+    font-size: .9em;
+  }
+  .projects .all-project .project-card .project-content p {
+    font-size: 1.8rem;
+  }
+  .projects .all-project .project-card .project-content h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .commen-header span::after, .commen-header span::before {
+    top: 14px;
+  }
+  .projects .commen-header span::before {
+    left: -83%;
+  }
+  .projects .commen-header span::after {
+    right: -83%;
+  }
+  .projects .all-project {
+    margin-top: 9em;
+  }
+}
+
+@media (max-width: 918px) {
+  .skills .commen-header span::before {
+    left: -90%;
+    top: 13px;
+  }
+  .services .commen-header span::after {
+    right: -90%;
+    top: 13px;
   }
 }
 
@@ -1204,6 +1358,15 @@ a {
   }
 }
 
+@media (max-width: 760px) {
+  .commen-header span::before {
+    left: -75%;
+  }
+  .commen-header span::after {
+    right: -75%;
+  }
+}
+
 @media (min-width: 767px) {
   .contact .all-contact .my-contact {
     display: -webkit-box;
@@ -1271,6 +1434,8 @@ footer .copy-social .social {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 50%;
+  margin: auto;
 }
 
 footer .copy-social .social i {
@@ -1283,4 +1448,9 @@ footer .copy-social .social i:hover {
 }
 
 /*End footer*/
+@media (min-width: 912px) {
+  .commen-header span::after, .commen-header span::before {
+    top: 21px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

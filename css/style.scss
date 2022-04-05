@@ -435,6 +435,14 @@ a {
     .about-me .about-me-info .about-detail {
         width: 45%;
     }
+    .about-me .commen-header span::before {
+        left: -90%;
+        top: 13px;
+    }
+    .about-me .commen-header span::after {
+        right: -90%;
+        top: 13px;
+    }
 }
 @media (max-width: 760px) {
     .commen-header h2 {
@@ -596,7 +604,17 @@ a {
         font-size: 1.8rem;
     }
 
-}  
+}
+@media (max-width: 918px){
+.services  .commen-header span::before {
+    left: -90%;
+    top: 13px;
+    }
+    .services  .commen-header span::after {
+        right: -90%;
+        top: 13px;
+        }
+}
 @media (max-width:857px) {
     .services .our-services .services-info h3 {
         font-size: 2.5rem;
@@ -626,11 +644,11 @@ a {
         font-size: 1.5rem;
         text-align: center;
     }
-    .commen-header span::before {
+    .services .commen-header span::before {
         left: -50%;
         top: 13px;
     }
-    .commen-header span::after {
+    .services .commen-header span::after {
         right: -50%;
         top: 13px;
     }
@@ -642,7 +660,8 @@ a {
 /*End our services*/
                                                                              /*Start skills*/
 .skills {
-    margin-top: 5em;
+    margin-top: 9em;
+    margin-bottom: 9em;
     .container {
         width: 100%;
         .commen-header {
@@ -758,6 +777,24 @@ a {
     }
 
 } 
+@media (max-width: 768px){
+.skills .commen-header span::before {
+        left: -71%;
+    }
+    .commen-header span::after {
+        right: -71%;
+    }
+}
+@media (max-width: 918px){
+    .skills  .commen-header span::before {
+        left: -90%;
+        top: 13px;
+        }
+        .services  .commen-header span::after {
+            right: -90%;
+            top: 13px;
+            }
+    }
 @media (min-width: 1124px) {
     .skills .container .commen-header {
         margin-bottom: 9em;
@@ -773,6 +810,8 @@ a {
     min-height: 100vh;
     opacity: 0;
     margin-top: 4em;
+    padding-top: 9em;
+    padding-bottom: 9em;
     &.active {
         opacity: 1;
     }
@@ -782,8 +821,10 @@ a {
     .all-project {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 50px;
+        grid-gap: 78px;
         position: relative;
+        margin-top: 13em;
+        margin-bottom: 6em;
         .project-card {
             height: 400px;
             position: relative;
@@ -794,6 +835,7 @@ a {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                border-radius: 21px;
             }
             .project-content {
                 position: relative;
@@ -803,21 +845,24 @@ a {
                 opacity: 0;
                 padding: 3em;
                 h3 {
-                    font-size: 2.3rem;
+                    font-size: 4.3rem;
                     text-align: center;
+                    color: $crisClr;
                 }
                 p {
-                    font-size: 1.5rem;
+                    font-size: 2.5rem;
                     text-align: center;
                     line-height: 1.6;
                     margin-top: 1em;
+                    margin-bottom: 2em;
+                    color: #0f000bb5;
                 }
                 .project-btn-grp {
                     display: grid;
                     grid-template-columns: repeat(2,1fr);
                     gap: 20px;
                     .project-btn {
-                        height: 40px;
+                        height: 46px;
                         font-size: 1.2rem;
                         color: $text;
                         background-color: $bg;
@@ -829,13 +874,28 @@ a {
                         &.live {
                             background: none;
                             border: 2px solid $text;
+                            a {
+                                color: $crisClr;
+                                font-size: 1.8em;
+                            }
                             &:hover {
                                 background-color: $crisClr;
+                                a {
+                                    color: $text;
+                                }
+                            }
+                        }
+                        &.github {
+                            a {
+                                color: $text;
+                                font-size: 1.8em;
                             }
                         }
                         &.github:hover {
                             background-color: $text;
-                            color: $crisClr;
+                            a {
+                                color: $bg;
+                            }
                         }
                     }
                 }
@@ -851,9 +911,37 @@ a {
         }
     }
 }
+
 @media (min-width: 800px) {
     .projects .all-project {
         grid-template-columns: repeat(2,1fr);
+    }
+    .commen-header span::after, .commen-header span::before {
+    top: 14px;
+}
+.commen-header span::before {
+    left: -94%;
+}
+.commen-header span::after {
+    right: -94%;
+}
+}
+@media (max-width: 1250px) {
+    .projects .all-project  .project-card .project-content .project-btn-grp .project-btn.live a ,
+    .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a{
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 1082px) {
+    .projects .all-project .project-content .project-btn-grp .project-btn.live a ,
+    .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a{
+        font-size: 1.2em;
+    }
+    .projects .all-project .project-card .project-content p {
+        font-size: 2rem;
+    }
+    .projects .all-project .project-card .project-content h3 {
+        font-size: 3.8rem;
     }
 }
 @media (min-width: 1190px) {
@@ -867,8 +955,25 @@ a {
         max-width: 70%;
         margin: auto;
     }
+    .projects {
+        padding-bottom: 2em;
+    }
+    .projects .all-project {
+        margin-top: 9em;
+    }
+}
+@media (min-width: 281px) {
+    .projects {
+        padding-bottom: 2em;
+    }
+    .projects .all-project {
+        margin-top: 9em;
+    }
 }
 @media (max-width: 280px) {
+    .projects {
+        padding-bottom: 2em;
+    }
     .projects .all-project .project-card .project-content h3 {
         font-size: 2.5rem;
     }
@@ -879,7 +984,47 @@ a {
     .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
         font-size: 1.2rem;
     }
+    .projects .all-project {
+        margin-top: 9em;
+    }
 }
+@media (max-width: 970px) {
+    .projects .all-project .project-content .project-btn-grp .project-btn.live a ,
+    .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a{
+        font-size: .9em;
+    }
+    .projects .all-project .project-card .project-content p {
+        font-size: 1.8rem;
+    }
+    .projects .all-project .project-card .project-content h3 {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 760px){
+    .commen-header span::after, .commen-header span::before {
+        top: 14px;
+    }
+    .projects .commen-header span::before {
+        left: -83%;
+    }
+    .projects .commen-header span::after {
+        right: -83%;
+    }
+    .projects .all-project {
+        margin-top: 9em;
+    }
+    }
+    @media (max-width: 918px){
+        .skills  .commen-header span::before {
+            left: -90%;
+            top: 13px;
+        }
+        .services  .commen-header span::after {
+            right: -90%;
+            top: 13px;
+        }
+}
+    
 /*End projects*/
 
                                                                                          /****Sart contact section****/
@@ -980,6 +1125,14 @@ a {
         max-width: 90%;
         margin: auto;
     }
+} 
+@media (max-width: 760px) {
+    .commen-header span::before {
+        left: -75%;
+    }
+    .commen-header span::after {
+        right: -75%;
+    }
 }
 @media (min-width: 767px) {
     .contact .all-contact .my-contact {
@@ -1026,6 +1179,8 @@ footer {
         .social {
             display: flex;
             justify-content: space-around;
+            width: 50%;
+            margin: auto;
             i {
                 font-size: 2.5rem;
                 color: $text;
@@ -1037,3 +1192,10 @@ footer {
     }
 }
 /*End footer*/
+@media (min-width: 912px){
+.commen-header span::after, .commen-header span::before {
+    top: 21px;
+    }
+}
+
+
