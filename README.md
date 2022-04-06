@@ -11,7 +11,7 @@
 
 ## Overview
 
-c'est projet que j'ai conçu dans la formation web develoopeur et mobil AFPA marseille.d'abord j'ai conçu le maquette in figma aprés je commance le code avec html, css, javascript.
+c'est un projet que j'ai conçu dans la formation développeur web et mobil à l' AFPA marseille . d'abord j'ai conçu la maquette avec figma avant de commencer de coder en html, css, javascript.
 
 ### The challenge
 
