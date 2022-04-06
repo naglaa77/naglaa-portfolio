@@ -1320,8 +1320,16 @@ a {
   color: #0f000b;
 }
 
+.all-contact form button a {
+  color: #0f000b;
+}
+
 .all-contact form button:hover {
   background-color: crimson;
+  color: #fff;
+}
+
+.all-contact form button:hover a {
   color: #fff;
 }
 

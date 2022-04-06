@@ -1088,9 +1088,15 @@ a {
         button {
             font-size: 1.6rem;
             color: $bg;
+            a {
+                color: $bg;
+            }
             &:hover {
                 background-color: $crisClr;
                 color: $text;
+                a {
+                    color: $text;
+                }
             }
         }
     }

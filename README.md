@@ -35,11 +35,11 @@ Voir les états de survol pour tous les éléments interactifs de la page
 
 ### Ce que j'ai appris
 
-j'ai appris à faire un maquette sur figma,aussi comment je crée repository sur githup et une clé SSH sur mon ordinateur.j'ai appris à rendre un site responsive grc^e media query en fin j'arrive héberger mon site sur github.en plus je utilise grid et sass.
+j'ai appris à faire une maquette sur figma, et aussi comment créer un repository sur githup et une clé SSH sur mon ordinateur .j'ai appris aussi à rendre un site responsive en utilisant media query en fin j'arrive a héberger mon site sur github. en plus j'utilise grid et sass.
 
 ### Continued development
 
-j'ai besoin de profender mes connaissance en grid et sass.je voudrais aussi utiliser mixin function en prochain projet.
+j'ai besoin d'approfondir mes connaissances en grid et sass.je voudrais aussi utiliser mixin function dans mon prochain projet.
 
 ## Author
 
