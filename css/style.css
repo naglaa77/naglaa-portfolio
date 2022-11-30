@@ -50,7 +50,7 @@ a {
 }
 
 .commen-header span::after, .commen-header span::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 50px;
   height: 2px;
@@ -69,7 +69,7 @@ a {
 /*Starrt navbar*/
 .navbar {
   width: 100%;
-  font-family: 'Roboto' , sans-serif;
+  font-family: "Roboto", sans-serif;
   position: fixed;
   padding: 30px 0;
   z-index: 5;
@@ -101,8 +101,8 @@ a {
   color: #fff;
   font-size: 3.5rem;
   font-weight: 600;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .navbar .max-width .logo a span {
@@ -118,8 +118,8 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin-left: 25px;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .navbar .max-width .menu li a:hover {
@@ -204,7 +204,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .home .container {
@@ -400,7 +400,7 @@ a {
   }
   .home .home-parts .myinfo .text-2 {
     font-size: 5rem;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -481,7 +481,7 @@ a {
 .about-me .about-me-info .about-detail p {
   font-size: 2rem;
   text-align: justify;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #3c3939;
 }
@@ -584,7 +584,7 @@ a {
     text-align: center;
   }
   .about-me .about-me-info .about-detail .btn {
-    margin: 2em auto .5em;
+    margin: 2em auto 0.5em;
     font-size: 1.8em;
   }
   .about-me .about-me-info .about-detail p {
@@ -624,7 +624,7 @@ a {
     width: 100%;
   }
   .about-me .about-me-info .about-detail .btn {
-    margin: 2em auto .5em;
+    margin: 2em auto 0.5em;
     font-size: 1.8em;
   }
   .about-me .about-me-info .about-detail p {
@@ -659,8 +659,8 @@ a {
   padding: 1em;
   width: 31%;
   border-radius: 5px;
-  -webkit-transition: background-color .5s ease;
-  transition: background-color .5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 .services .our-services .services-info:hover {
@@ -689,7 +689,7 @@ a {
 .services .our-services .services-info p {
   font-size: 2.3rem;
   line-height: 1.6;
-  font-family: 'Poppine, sans-serif';
+  font-family: "Poppine, sans-serif";
   color: #f3f1ed;
   margin: 1em 0 1.2em;
 }
@@ -815,14 +815,14 @@ a {
 
 .skills .skills-contant .column.left h3 {
   font-size: 1.9rem;
-  font-family: 'Poppin', sans-serif;
+  font-family: "Poppin", sans-serif;
   font-weight: bold;
   margin-bottom: 1em;
 }
 
 .skills .skills-contant .column.left p {
   font-size: 2rem;
-  font-family: 'Poppin', sans-serif;
+  font-family: "Poppin", sans-serif;
   line-height: 1.7;
   margin-bottom: 1.5em;
   color: #140f0fdb;
@@ -857,7 +857,7 @@ a {
 }
 
 .skills .skills-contant .column.right .bars .line::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -881,12 +881,20 @@ a {
   width: 70%;
 }
 
+.skills .skills-contant .column.right .bars .line.react::before {
+  width: 60%;
+}
+
 .skills .skills-contant .column.right .bars .line.php::before {
   width: 60%;
 }
 
 .skills .skills-contant .column.right .bars .line.mysql::before {
-  width: 50%;
+  width: 60%;
+}
+
+.skills .skills-contant .column.right .bars .line.symfony::before {
+  width: 60%;
 }
 
 @media (min-width: 550px) {
@@ -1008,9 +1016,9 @@ a {
 .projects .all-project .project-card .project-content {
   position: relative;
   color: white;
-  font-family: 'Poppin' ,sans-serif;
-  -webkit-transition: .5s;
-  transition: .5s;
+  font-family: "Poppin", sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   opacity: 0;
   padding: 3em;
 }
@@ -1090,12 +1098,41 @@ a {
   opacity: 1;
 }
 
+.projects .git-projects {
+  width: 100%;
+  padding: 1rem 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4rem 0;
+}
+
+.projects .git-projects .btn-project {
+  color: white;
+  display: block;
+  font-size: 2.5rem;
+  border: 1px solid white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.projects .git-projects .btn-project:hover {
+  border: 1px solid red;
+}
+
 @media (min-width: 800px) {
   .projects .all-project {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  .commen-header span::after, .commen-header span::before {
+  .commen-header span::after,
+  .commen-header span::before {
     top: 14px;
   }
   .commen-header span::before {
@@ -1107,15 +1144,33 @@ a {
 }
 
 @media (max-width: 1250px) {
-  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.live a,
-  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
+  .projects
+.all-project
+.project-card
+.project-content
+.project-btn-grp
+.project-btn.live
+a,
+  .projects
+.all-project
+.project-card
+.project-content
+.project-btn-grp
+.project-btn.github
+a {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 1082px) {
   .projects .all-project .project-content .project-btn-grp .project-btn.live a,
-  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
+  .projects
+.all-project
+.project-card
+.project-content
+.project-btn-grp
+.project-btn.github
+a {
     font-size: 1.2em;
   }
   .projects .all-project .project-card .project-content p {
@@ -1166,7 +1221,12 @@ a {
     font-size: 1.5rem;
     text-align: justify;
   }
-  .projects .all-project .project-card .project-content .project-btn-grp .project-btn {
+  .projects
+.all-project
+.project-card
+.project-content
+.project-btn-grp
+.project-btn {
     font-size: 1.2rem;
   }
   .projects .all-project {
@@ -1176,8 +1236,14 @@ a {
 
 @media (max-width: 970px) {
   .projects .all-project .project-content .project-btn-grp .project-btn.live a,
-  .projects .all-project .project-card .project-content .project-btn-grp .project-btn.github a {
-    font-size: .9em;
+  .projects
+.all-project
+.project-card
+.project-content
+.project-btn-grp
+.project-btn.github
+a {
+    font-size: 0.9em;
   }
   .projects .all-project .project-card .project-content p {
     font-size: 1.8rem;
@@ -1188,7 +1254,8 @@ a {
 }
 
 @media (max-width: 760px) {
-  .commen-header span::after, .commen-header span::before {
+  .commen-header span::after,
+  .commen-header span::before {
     top: 14px;
   }
   .projects .commen-header span::before {
@@ -1265,7 +1332,7 @@ a {
 
 .all-contact .map .my-info .info .info-detail span {
   font-size: 1.7rem;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #5c4d4d;
 }
 
@@ -1457,7 +1524,8 @@ footer .copy-social .social i:hover {
 
 /*End footer*/
 @media (min-width: 912px) {
-  .commen-header span::after, .commen-header span::before {
+  .commen-header span::after,
+  .commen-header span::before {
     top: 21px;
   }
 }
